@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ----------------------------- estilos CSS ----------------------------- -->
+  <link rel="stylesheet" href="../styles/tarefas.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ----------------------------- sweet alert ----------------------------- -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- CDN example (unpkg) -->
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+  <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+
+
+  <title>To-Do App</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#">Tarefas</a>
+    </nav>
+
+     <div id="divDadosUsuario" class="user-info">
+      <!--<p>Bem vindo <b id="userName"></b></p>
+      <div class="user-image"></div>
+      <p id="exitApp">Finalizar sessão</i>
+      </p> -->
+    </div>
+  </header>
+
+
+  <form class="nova-tarefa">
+    <div class="not-done "></div>
+    <input id="novaTarefa" type="text" placeholder="Nova tarefa" minlength="4" required>
+    <button id="createTaskbtn" type="submit">
+      <img src="../assets/plus.png" alt="Adicionar uma nova tarefa">
+    </button>
+  </form>
+
+  <h2 class="titulo-tarefas" >Tarefas Pendentes</h2>
+
+  <ul class="tarefas-pendentes" id="openedAppointmentsList">
+   <!-- Aqui vão as tarefas pendentes -->
+  </ul>
+
+  <h2 class="titulo-tarefas" >Tarefas terminadas</h2>
+  <ul class="tarefas-terminadas" id="closedAppointmentsList">
+    <!-- Aqui vão as tarefas realizadas -->
+  </ul>
+
+  <script src="../scripts/tasks.js" type="module"></script>
+</body>
+
+</html>
